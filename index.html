@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pretty curious</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink-deep: #c8127a;
+    --pink-hero: #d81b86;
+    --orange: #e2621f;
+    --pink-bright: #ff86c4;
+    --pink-pale: #ffc3e0;
+    --pink-pill: #f6a9cf;
+    --pink-pill-hover: #f592c3;
+    --maroon: #7a2a20;
+    --cream: #fff6f2;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--pink-bright);
+    font-family: 'Lora', serif;
+    color: var(--maroon);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { text-decoration: none; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background:
+      linear-gradient(160deg, rgba(122,42,32,0.34) 0%, rgba(122,42,32,0.22) 45%, rgba(122,42,32,0.4) 100%),
+      url('assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center 35%;
+    padding: 4.5rem 1.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    transform: scaleX(0.72);
+    transform-origin: center;
+    font-style: normal;
+    font-size: clamp(4.2rem, 15vw, 9.5rem);
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    text-shadow: 0 2px 18px rgba(122,10,60,0.45);
+  }
+
+  .hero-tagline {
+    position: relative;
+    z-index: 2;
+    font-style: italic;
+    font-size: clamp(0.95rem, 2.4vw, 1.15rem);
+    color: #ffe6f2;
+    margin: 0.9rem 0 2.6rem;
+  }
+
+  .links {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .link-pill {
+    display: block;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: var(--pink-pill);
+    color: var(--maroon);
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    border-radius: 999px;
+    text-align: center;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 2px 0 rgba(122,42,32,0.08);
+  }
+
+  .link-pill:hover {
+    background: var(--pink-pill-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(122,42,32,0.18);
+  }
+
+  .link-pill:active { transform: translateY(0); }
+
+  /* ---------- UPLOAD SECTION ---------- */
+  .uploads {
+    background: var(--pink-bright);
+    padding: 3.5rem 1.5rem 4.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .uploads h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    transform: scaleX(0.75);
+    display: inline-block;
+    font-size: clamp(2rem, 5.5vw, 2.9rem);
+    color: var(--maroon);
+    margin: 0 0 2rem;
+  }
+
+  .video-frame {
+    width: 100%;
+    max-width: 900px;
+    background: var(--pink-pale);
+    border: 1px solid #c76e97;
+    border-radius: 18px;
+    padding: 0.9rem;
+  }
+
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .video-wrap iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #a44a75;
+    background: var(--pink-bright);
+  }
+
+  @media (max-width: 480px) {
+    .hero { padding: 3.5rem 1.25rem 3rem; }
+    .link-pill { font-size: 1.05rem; padding: 1rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1 class="hero-title">pretty curious</h1>
+    <p class="hero-tagline">for the pretty curious hotties &lt;3</p>
+
+    <nav class="links">
+      <a class="link-pill" href="https://www.youtube.com/channel/UC0uzSBtSc9wnQQtkOWji_bw" target="_blank" rel="noopener">youtube</a>
+      <a class="link-pill" href="https://www.instagram.com/prettycuriousclub?stkn=MWM3Mm1rYWU3cmhsZw%3D%3D&utm_source=qr" target="_blank" rel="noopener">instagram</a>
+      <a class="link-pill" href="https://www.tiktok.com/@prettycuriousclub?_r=1&_t=ZP-99hnvUL2e58" target="_blank" rel="noopener">tiktok</a>
+    </nav>
+  </section>
+
+  <section class="uploads">
+    <h2>most recent upload</h2>
+    <div class="video-frame">
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube.com/embed/TzWeKqbBhto"
+          title="Most recent upload"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer>pretty curious</footer>
+
+</body>
+</html>
